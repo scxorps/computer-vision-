@@ -1,0 +1,26 @@
+import cv2
+import random
+#add stuff on an image
+
+img = cv2.imread('Orbit.png',1)
+#loaded my image
+#add random colors on a part of an image
+for i in range(100):
+    for j in range(img.shape[1]):
+                img[i][j]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+        
+#add random colors on a part of an image
+cv2.imshow('Image',img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows() 
+
+
+
+#copypaste
+tag = img[100:300,200:300]
+img[100:300,400:500] = tag
+
+cv2.imshow('Image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows() 

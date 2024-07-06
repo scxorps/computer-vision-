@@ -1,0 +1,16 @@
+import cv2
+#show and control an image size width , and add it into new file
+img = cv2.imread('Orbit.png',1)
+#loaded my image
+img = cv2.resize(img,(0,0),fx=2,fy=2)
+#resized my image
+img = cv2.rotate(img,cv2.ROTATE_90_CLOCKWISE)
+#rotated my image
+cv2.imwrite('new_logo.png',img)
+#saved my image on a new folder
+cv2.imshow('Image',img)
+#showed my image
+cv2.waitKey(0)
+#waited for a key press
+cv2.destroyAllWindows()
+#destroyed all windows
